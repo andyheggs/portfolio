@@ -1,5 +1,16 @@
-const App = () => {
-  return <h1>Hello world!</h1>;
-};
+import React from 'react'
+import Navbar from './Components/Navbar/Navbar'
+import Hero from './Components/Hero/Hero'
+import About from './Components/About/About'
 
-export default App;
+const App = () => {
+  return (
+    <div>
+      <Navbar/>
+      <Hero/>
+      <About/>
+    </div>
+  )
+}
+
+export default App
