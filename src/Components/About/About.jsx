@@ -6,10 +6,6 @@ import profile_img from '../../assets/about_profile.svg'
 const About = () => {
   return (
     <div id='about' className='about'>
-      <div className="about-title">
-        <h1>About me</h1>
-        <img src={theme_pattern} alt="" />
-      </div>
       <div className="about-sections">
         <div className="about-right">
           <div className="about-para">

@@ -5,10 +5,14 @@
 }
 
 .sidebar {
-  /* Sidebar defaults: no special positioning on mobile, it will be just a block */
+  margin: 0px;
+  padding: 0px; /* Sidebar defaults: no special positioning on mobile, it will be just a block */
 }
 
 .main-content {
+  padding: 0.5rem;          /* Corrected spacing unit */
+  box-sizing: border-box;   /* Ensure padding is included in the width */
+  max-width: 100vw;
   /* Main content defaults: also normal block flow on mobile */
 }
 
@@ -16,7 +20,10 @@
 @media (min-width: 768px) {
   .layout-container {
     display: grid;                     /* Use CSS Grid to arrange two columns */
-    grid-template-columns: 500px 1fr;  /* Sidebar 300px, main content fills the rest */
+    grid-template-columns: min(500px, 100%) 1fr;
+    gap: 80px;
+    max-width: 100vw;
+    margin: 0 auto;  /* Sidebar 300px, main content fills the rest */
     /* You can adjust the sidebar width as needed (e.g., 250px or a percentage).
        Using a fixed pixel width for the sidebar ensures the left panel stays a consistent size.
        The right column is 1fr (one fractional unit) to take up remaining space. */
@@ -37,7 +44,7 @@
   .main-content {
     /* The right side will scroll normally as part of the page.
        No special positioning needed since it's the grid second column. */
-    padding: 1rem;  /* Optional: add some padding for nicer layout */
+    padding: 0.5 rem;  /* Optional: add some padding for nicer layout */
     /* By default, overflow is visible, allowing content to extend vertically.
        This column will expand as needed to fit all its sections and will have the page’s scrollbar. */
   }

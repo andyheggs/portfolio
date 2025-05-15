@@ -60,14 +60,16 @@
 @media(max-width:768px){
   .navbar{
     margin: 20px 50px;
+    justify-content: flex-end
   }
   .nav-connect{
     display: none;
   }
   .nav-mob-open{
     display: block;
-    position: fixed;
-    right: 30px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
   }
 
   .nav-mob-close{
@@ -83,13 +85,15 @@
     flex-direction: column;
     align-items: start;
     top: 0;
-    gap: 30px;
+    padding-bottom: 40px;
+    gap: 20px;
     background-color: #1f0016;
     width: 350px;
     height: 100;
     z-index: 2;
     transition: right 0.5s;
     right: -350px;
+    border: 1px solid #fff;
   }
 
   .nav-menu li{

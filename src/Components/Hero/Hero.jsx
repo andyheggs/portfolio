@@ -9,9 +9,9 @@ const Hero = () => {
     <div id='home' className='hero'>
       <img src={profile_img} alt=""/>
       <h1><span>AI-centric</span>  software developer & data scientist </h1>
-      <p>Capitalising data and building business solutions.</p>
+      <p>Capitalising data, building business solutions.</p>
       <div className="hero-action">
-        <div className="hero-connect"><AnchorLink className='anchor-link' offset={50} href='#contact'>Connect with me</AnchorLink></div>
+        <div className="hero-connect"><AnchorLink className='anchor-link' offset={50} href='#contact' style={{ color: 'black', fontWeight: 'bold' }}>Connect with me</AnchorLink></div>
         <div className="hero-resume">My resume</div>
       </div>
     </div>
