@@ -11,9 +11,6 @@ const About = () => {
         <img src={theme_pattern} alt="" />
       </div>
       <div className="about-sections">
-        <div className="about-left">
-          <img src={profile_img} alt="" />
-        </div>
         <div className="about-right">
           <div className="about-para">
             <p>I am a passionate web developer with a keen interest in creating dynamic and responsive web applications. I have experience in various front-end and back-end technologies, and I am always eager to learn new skills and improve my craft.</p>

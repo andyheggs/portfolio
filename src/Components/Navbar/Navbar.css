@@ -2,7 +2,8 @@
   display:flex;
   align-items: center;
   justify-content: space-between;
-  margin: 20px 170px;
+  width: 100%;
+  padding: 20px;
 }
 
 .logo{
@@ -12,7 +13,7 @@
 
 .nav-menu{
   display: flex;
-  align-items: center;
+  align-items: vertical;
   list-style: none;
   gap: 60px;
   font-size: 20px;
