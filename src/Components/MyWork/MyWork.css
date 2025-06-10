@@ -1,37 +1,44 @@
+/********************
+  Main section wrapper styling
+********************/
 .mywork{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-right: 40%;
   justify-content: center;
   gap: 20px;
   margin: 20px 20px;
 }
 
+/********************
+  Title section container
+********************/
 .mywork-title{
   position: relative;
 }
 
+/********************
+  Title Heading styling
+********************/
 .mywork-title h1{
-  padding : 0px 0px 30px 0px;
-  font-size: 50px;
-  font-weight: 600;
+  padding : 0rem;
+  font-size: 2.5rem;
 }
 
-.mywork-title img{
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
-}
 
+/********************
+  Work items grid container
+********************/
 .mywork-container{
   display: grid;
   max-width: 100%;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 2rem;
 }
 
+/********************
+  Work item image styling
+********************/
 .mywork-container img{
   box-sizing: border-box;
   max-width: 100%;
@@ -40,59 +47,93 @@
   cursor: pointer;
 }
 
+/********************
+  Image hover effect
+********************/
 .mywork-container img:hover{
   transform: scale(1.10);
-  border: 4px solid #ff00ff;
-  border-radius: 10px;
+  border: 5px solid #E68A25;
+  border-radius: 15px;
   transition: 0.3s;
 }
 
+/********************
+  Show more button styling
+********************/
 .mywork-showmore {
   display: flex;
-  gap: 15px;
-  border-radius: 50px;
-  border: 2px solid #fff;
-  padding: 30px 60px;
-  font-size: 22px;
-  font-weight: 500;
-  margin-bottom: 80px;
+  margin: 2rem auto 1rem auto;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  max-width: 15rem;
+  border-radius: 3rem;
+  border: 0.2rem solid #fff;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
   transition: 0.6s;
   cursor: pointer;
 }
 
+/********************
+  Show more button hover effect
+********************/
 .mywork-showmore:hover{
-  gap: 30px;
+  gap: 3rem;
   transition: 0.6s;
 }
 
+/********************
+  Section responsive wrapper
+********************/
+.section {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100vw;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/********************
+  Responsive styles for screens <= 768px
+********************/
 @media(max-width:768px){
+  /* Adjust main wrapper gaps and margins */
   .mywork{
     gap: 50px;
     margin: 50px 70px;
     align-items: start;
   }
 
+  /* Retain title heading styling */
   .mywork-title h1{
     padding: 0;
     font-size: 50px;
     font-weight: 600;
   }
 
+  /* Resize decorative image under title */
   .mywork-title img{
     width: 130px;
     margin-right: -20px;
   }
 
+  /* Keep two columns in grid, reduce gap */
   .mywork-container{
     grid-template-columns: 1fr 1fr;
     gap: 30px;
   }
 
+  /* Ensure images use full width/height of grid area */
   .mywork-container img{
     width: 100%;
     height: 100%;
   }
 
+  /* Adjust padding/font of show more button */
   .mywork-showmore{
     padding: 20px 40px;
     font-size: 18px;
@@ -100,4 +141,150 @@
     cursor: pointer;
   }
 
+  /* Adjust list gap for individual work items */
+  .mywork-list {
+    gap: 1.5rem;
+  }
+
+  /* Stack project image on top of description */
+  .mywork-project {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  /* Ensure project image is full width and has margin below */
+  .mywork-project-img {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Adjust project description heading and paragraph font sizes */
+  .mywork-project-desc h2 {
+    font-size: 1.2rem;
+  }
+
+  .mywork-project-desc p {
+    font-size: 1rem;
+  }
+}
+
+/********************
+  List styling for individual work items
+********************/
+.mywork-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/********************
+  Work project item styling
+********************/
+.mywork-project {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+  background: rgba(255,255,255,0.03);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: 0.4s;
+  position: relative;
+  flex-wrap: wrap; /* allow wrapping for badges */
+}
+
+/********************
+  Work project image styling
+********************/
+.mywork-project-img {
+  width: 12vw;
+  max-width: 40vw;
+  border-radius: 0rem;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/********************
+  Work project description styling
+********************/
+.mywork-project-desc {
+  flex: 1 1 2rem;
+  min-width: 0;
+}
+
+.mywork-project-desc h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.mywork-project-desc p {
+  margin: 0;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/********************
+  Work project link hover effect
+********************/
+.mywork-project-link:hover .mywork-project,
+.mywork-project:hover {
+  border: 2px solid #3DAAF4;
+  background-image: linear-gradient(45deg, #00000056, #000d5862);
+  transform: scale(1.05);
+  transition: 0.4s;
+}
+
+/********************
+  Technology badge styling
+********************/
+.mywork-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  margin-top: 0.2rem;
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+  order: 2; /* ensure it comes after image and desc */
+}
+
+.mywork-tech-item {
+  margin: 0;
+}
+
+.mywork-tech-badge {
+  display: flex;
+  align-items: center;
+  border-radius: 9999px;
+  background: rgba(0, 191, 165, 0.10);
+  color: #E68A25;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.5;
+  white-space: nowrap;
+  border: 1px solid rgba(38,255,230,0.18);
+  transition: background 0.2s;
+}
+
+@media (max-width: 900px) {
+  .mywork-project {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .mywork-project-img {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+  .mywork-tech-list {
+    margin-top: 0.5rem;
+  }
 }

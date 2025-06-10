@@ -1,0 +1,197 @@
+/* Container and layout */
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  color: #fff;
+}
+/* ---------------------------- */
+/* 2. Only when “All” is selected (i.e. NOT .is-filtered), force full viewport */
+/* ---------------------------- */
+.skills-container:not(.is-filtered) {
+  min-height: 100vh;
+}
+
+/* ---------------------------- */
+/* 3. If a single category is selected (.is-filtered), collapse to content */
+/* ---------------------------- */
+.skills-container.is-filtered {
+  min-height: auto;
+}
+
+.skills-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.skills-category-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  justify-content: center;
+}
+
+.skills-category-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  border: 1px solid #4b5563;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background: #2d3748;
+  color: #fff;
+  transition: background 0.2s, border 0.2s;
+  cursor: pointer;
+}
+.skills-category-btn.selected {
+  background: #2563eb;
+  border-color: #60a5fa;
+}
+.skills-category-btn:not(.selected):hover {
+  background: #374151;
+  border-color: #6b7280;
+}
+/* Mobile layout */
+.skills-mobile {
+  display: block;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 36rem;
+}
+/* Orbit layout (desktop) */
+.skills-orbit {
+  position: relative;
+  display: none;
+  align-items: start;
+  justify-content: center;
+  width: 100%;
+  max-width: 80rem;
+  height: 42rem;
+  background-image: url('../../assets/Skills_background.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+@media (min-width: 768px) {
+  .skills-orbit {
+    display: flex;
+  }
+  .skills-mobile {
+    display: none;
+  }
+}
+.skills-orbit-category {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  text-align: center;
+}
+.skills-orbit-category-title {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  white-space: nowrap;
+}
+.skills-orbit-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  padding: 0.5rem;
+  max-width: 15rem;
+}
+
+/* Skill pill */
+.skills-pill {
+  border-radius: 9999px;
+  background: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.2rem;
+  height: 4.2rem;
+  font-size: 0.7rem;
+  text-align: center;
+  padding: 0.5rem;
+  line-height: 1.1;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+@media (min-width: 640px) {
+  .skills-pill {
+    font-size: 0.875rem;
+  }
+}
+.skills-pill:hover {
+  transform: scale(1.1);
+}
+
+
+
+.skills-mobile-category {
+  border: 1px solid #374151;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.skills-mobile-category-title {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.125rem;
+  text-align: center;
+}
+.skills-mobile-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* --------------------------------------------------------------------------- */
+/*  1. Mobile-first defaults  */
+/* --------------------------------------------------------------------------- */
+
+.skills-mobile {
+  display: block;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 36rem;
+}
+
+.skills-orbit {
+  position: relative;
+  display: none;
+  align-items: start;
+  justify-content: center;
+  width: 100%;
+  max-width: 80rem;
+  height: 42rem;
+}
+
+/* --------------------------------------------------------------------------- */
+/*  2. Desktop breakpoint (≥768px)  */
+/* --------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+  .skills-orbit {
+    display: flex;   /* show orbit on desktop by default */
+  }
+  .skills-mobile {
+    display: none;   /* hide mobile on desktop by default */
+  }
+}
+
+/* --------------------------------------------------------------------------- */
+/*  3. When a specific category is chosen (!= "All"), even on desktop: hide orbit, show mobile  */
+/*     That is, when .skills-container has class "is-filtered"                            */
+/* --------------------------------------------------------------------------- */
+.skills-container.is-filtered .skills-orbit {
+  display: none !important;
+}
+.skills-container.is-filtered .skills-mobile {
+  display: block !important;
+}
+/* --------------------------------------------------------------------------- */

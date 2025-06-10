@@ -1,0 +1,42 @@
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 1rem;
+  gap: 2rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+  font-size: clamp(1rem, 4vw, 2rem);
+  margin-top: auto;
+}
+
+.social-icons svg {
+  font-size: inherit;
+}
+
+@media (max-width: 768px) {
+  .social-icons {
+    padding: 1rem;
+    margin: 0;
+    gap: 2rem;
+    font-size: clamp(1rem, 4vw, 2rem);
+  }
+}
+
+.linkedIn-icon{
+  color: #0077B5;
+}
+
+.github-icon{
+  color: #E68A25;
+}
+
+.linkedIn-icon:hover {
+  transform: scale(1.1);
+  color: #E68A25;
+}
+
+.github-icon:hover {
+  color: #3DAAF4;
+}
