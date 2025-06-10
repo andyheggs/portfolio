@@ -1,12 +1,102 @@
-# React + Vite
+# Andy Heggs Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the source code my personal portfolio website, built with React and styled using custom CSS. The site showcases my projects, skills, and experience, providing an interactive and visually appealing overview for visitors and potential collaborators.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Available Scripts](#available-scripts)
+- [License](#license)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Responsive design for desktop and mobile devices
+- Built with modern React (using Vite for fast development)
+- Styled using custom CSS
+- Interactive data visualizations (via Nivo and D3)
+- Smooth scrolling and routing with React Router
+- Modular component-based architecture
+
+## Tech Stack
+
+- **Framework:** [React](https://react.dev/)
+- **Build Tool:** [Vite](https://vitejs.dev/)
+- **Styling:** CSS(https://www.w3.org/Style/CSS//), [Emotion](https://emotion.sh/docs/styled)
+- **UI Components:** [Material UI Icons](https://mui.com/material-ui/material-icons/)
+- **Data Visualization:** [Nivo](https://nivo.rocks/), [D3 Hierarchy](https://github.com/d3/d3-hierarchy)
+- **Animation:** [Framer Motion](https://www.framer.com/motion/)
+- **Linting:** [ESLint](https://eslint.org/)
+- **Routing:** [React Router DOM](https://reactrouter.com/)
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or above recommended)
+- npm
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/andyheggs/portfolio.git
+   cd portfolio
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+   The site will be available at `http://localhost:5173` (or as specified by Vite).
+
+4. **Build for production:**
+   ```bash
+   npm run build
+   ```
+
+5. **Preview production build:**
+   ```bash
+   npm run preview
+   ```
+
+## Project Structure
+
+```
+.
+├── public/           # Static assets
+├── src/
+│   ├── assets/       # Images, fonts, etc.
+│   ├── Components/   # React component library
+│   ├── pages/        # App/page-level components
+│   ├── App.jsx       # Main app entry
+│   ├── main.jsx      # ReactDOM render entry
+│   ├── App.css       # App-level styles
+│   └── index.css     # Global styles
+├── index.html        # HTML template
+├── package.json
+├── vite.config.js
+└── eslint.config.js
+```
+
+## Available Scripts
+
+- `npm run dev` – Start the local development server
+- `npm run build` – Build the application for production
+- `npm run preview` – Preview the production build locally
+- `npm run lint` – Run ESLint to check for code issues
+
+## License
+
+This project is private and not licensed for redistribution.
+
+---
+
+*Made with ❤️ by Andy Heggs*
