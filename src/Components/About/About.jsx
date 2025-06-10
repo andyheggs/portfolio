@@ -29,8 +29,7 @@ const About = () => {
                 href="/cv.pdf"
                 target="_blank"
                 title="Opens in a new tab"
-                rel="noopener noreferrer"
-              >
+                rel="noopener noreferrer"              >
                 Resume
               </a>
             </div>
