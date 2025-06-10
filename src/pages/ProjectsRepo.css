@@ -1,0 +1,82 @@
+:root {
+  --accent: #3DAAF4;
+  --fg-primary: #dbe1ff;
+  --fg-secondary: #8892b0;
+  --bg-dark: #0a192f;
+  --border-light: #1e2d3d;
+}
+
+/* --------------  Page wrapper -------------- */
+.projects-repo {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  color: var(--fg-primary);
+  box-sizing: border-box;
+}
+
+/* everything below is unchanged from InsightsRepo.css */
+
+.repo-title {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 600;
+  margin: 0 0 48px;
+  letter-spacing: -0.5px;
+  text-align: left;
+}
+
+.repo-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border-light);
+  transition: background 0.25s ease;
+}
+
+.repo-item:hover { background: rgba(100,255,218,0.04); }
+
+.repo-item time {
+  flex: 0 0 110px;
+  font-size: 0.875rem;
+  color: var(--fg-secondary);
+  white-space: nowrap;
+}
+
+.repo-item h2 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.3;
+  transition: color 0.25s ease;
+}
+
+.repo-item:hover h2 { color: var(--accent); }
+
+.repo-item p {
+  margin: 4px 0 0;
+  font-size: 0.95rem;
+  color: var(--fg-secondary);
+  line-height: 1.5;
+}
+
+.repo-read {
+  margin-left: auto;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+  align-self: center;
+  transition: transform 0.2s ease;
+}
+
+.repo-read::after { content: " ↗"; font-size: 0.8em; }
+
+.repo-read:hover,
+.repo-read:focus { transform: translateY(-2px); }
+
+@media (max-width: 600px) {
+  .repo-item { flex-direction: column; gap: 12px; }
+  .repo-read { margin-left: 0; align-self: flex-start; }
+}
