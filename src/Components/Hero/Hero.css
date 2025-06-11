@@ -1,25 +1,25 @@
 /****** Hero Section Styles ******/
 .hero{
-  display: flex;          /* Use flexbox for layout */
-  align-items: center;    /* center items vertically */
-  flex-direction: column; /* stack children vertically */
-  gap: 0.5rem;              /* spacing between children */
+  display: flex;                          /* Use flexbox for layout */
+  align-items: center;                    /* center items vertically */
+  flex-direction: column;                 /* stack children vertically */
+  gap: 0.5rem;                            /* spacing between children */
 }
 
 /****** Hero Image Styles ******/
 .hero-logo img{
-  text-align:center;    /* center image */
-  margin-top: 1rem;     /* space above image */
-  margin-bottom: 0rem;  /* no space below image */
-  width: 8vw;           /* responsive width */
-  height: auto;         /* maintain aspect ratio */
+  text-align:center;                      /* center image */
+  margin-top: 1rem;                       /* space above image */
+  margin-bottom: 0rem;                    /* no space below image */
+  width: 8vw;                             /* responsive width */
+  height: auto;                           /* maintain aspect ratio */
 }
 
 /****** Hero H1 Title Styles ******/
 .hero-myname{
-  font-size:1.2rem;    /* large font size */
-  text-align:center;   /* center text */
-  font-weight: 100;    /* thin font weight */
+  font-size:1.2rem;                       /* large font size */
+  text-align:center;                      /* center text */
+  font-weight: 100;                       /* thin font weight */
   background: linear-gradient(90deg,#f19409 10%, #17a0fc 100%);
   background-clip: text;                  /* clip background to text */
   -webkit-background-clip: text;          /* Safari/Webkit support for background-clip */
@@ -28,48 +28,48 @@
 
 /****** Hero H2 Subtitle Styles ******/
 .hero-techtitle{
-  text-align: center;   /* center text */
-  width: 100%;          /* full width */
-  font-size: 1rem;      /* subtitle size */
-  font-weight: 600;     /* bold font weight */
+  text-align: center;                     /* center text */
+  width: 100%;                            /* full width */
+  font-size: 1rem;                        /* subtitle size */
+  font-weight: 600;                       /* bold font weight */
 }
 
 /****** Hero Paragraph Styles ******/
 .hero-tagline{
-  text-align: center;   /* center text */
-  width: 100%;          /* full width */
-  padding-bottom: 0;    /* no padding at bottom */
-  font-size: 1.2rem;      /* paragraph font size */
-  font-weight: 400;     /* normal font weight */
-  color: #ffffffa3;   /* semi-transparent white text */
+  text-align: center;                     /* center text */
+  width: 100%;                            /* full width */
+  padding-bottom: 0;                      /* no padding at bottom */
+  font-size: 1.2rem;                      /* paragraph font size */
+  font-weight: 400;                       /* normal font weight */
+  color: #ffffffa3;                     /* semi-transparent white text */
 }
 
 /****** Responsive Styles (Max-width: 768px) ******/
   @media(max-width:768px){
     .hero-logo img{
-    margin-bottom: 0px;   /* no margin at bottom */
-    width: 30vw;          /* increase image width for small screens */
-    height: auto;         /* maintain aspect ratio */
+    margin-bottom: 0px;                   /* no margin at bottom */
+    width: 30vw;                          /* increase image width for small screens */
+    height: auto;                         /* maintain aspect ratio */
     }
 
     .hero-myname{
-    margin-top: 0px;    /* remove top margin */
-    width: 90%;         /* make title slightly smaller */
-    font-size: 1.5rem;  /* reduce font size for small screens */
+    margin-top: 0px;                      /* remove top margin */
+    width: 90%;                           /* make title slightly smaller */
+    font-size: 1.5rem;                    /* reduce font size for small screens */
     }
 
     .hero-techtitle{
-    width: 50%;         /* reduce paragraph width */
-    font-size: 1.1rem;  /* reduce font size for small screens */
-    line-height: 1.5;   /* add line height for readability */
-    margin: 0px;        /* remove default margin */
+    width: 70%;                           /* reduce paragraph width */
+    font-size: 1.1rem;                    /* reduce font size for small screens */
+    line-height: 1.5;                     /* add line height for readability */
+    margin: 0px;                          /* remove default margin */
     }
 
     .hero-tagline{
-    width: 50%;          /* reduce paragraph width */
-    font-size: 1rem;     /* reduce font size for small screens */
-    line-height: 1.2;    /* add line height for readability */
-    margin: 0px;         /* remove default margin */
+    width: 70%;                           /* reduce paragraph width */
+    font-size: 1.2rem;                    /* reduce font size for small screens */
+    line-height: 1.2;                     /* add line height for readability */
+    margin: 0px;                          /* remove default margin */
     }
 
 

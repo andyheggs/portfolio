@@ -26,7 +26,7 @@
     padding: 1rem;                           /* Keep padding consistent */
     margin: 0;                               /* Remove top margin */
     gap: 2rem;                               /* Maintain gap between icons */
-    font-size: clamp(1.5rem, 4vw, 2.5rem);   /* Slightly larger icons on mobile */
+    font-size: clamp(2rem, 4vw, 2.5rem);   /* Slightly larger icons on mobile */
   }
 }
 
