@@ -1,3 +1,4 @@
+/* Navbar container */
 .navbar{
   display:flex;
   flex-direction: column;
@@ -5,11 +6,13 @@
   padding: 2rem 0 0 0;
 }
 
+/* Logo styles */
 .logo{
   width: 100px;
   align-items: left;
 }
 
+/* Navigation menu container */
 .nav-menu{
   display: flex;
   flex-direction: column;
@@ -21,6 +24,7 @@
   position: relative;
   }
 
+/* Vertical divider before nav-menu */
 .nav-menu:before {
   content: '';
   position: absolute;
@@ -31,6 +35,7 @@
   background-color: #fff;
 }
 
+/* Connect button on navbar */
 .nav-connect{
   padding: 20px 40px;
   border-radius: 50px;
@@ -40,10 +45,12 @@
   transition: 0.5s;
 }
 
+/* Hover effect for Connect button */
 .nav-connect:hover{
   transform: scale(1.05);
 }
 
+/* Navigation menu list items */
 .nav-menu li {
   display: flex;
   align-items: center;
@@ -52,24 +59,29 @@
   cursor: pointer;
 }
 
+/* Icon/image within nav-menu items */
 .nav-menu li img{
   display: flex;
   margin:auto;
 }
 
+/* Navigation link styles */
 .anchor-link{
   text-decoration: none;
   color: #fff;
 }
 
+/* Mobile menu close icon - default hidden */
 .nav-mob-close{
   display: none;
 }
 
+/* Mobile menu open icon - default hidden */
 .nav-mob-open{
   display: none;
 }
 
+/* Underline/active menu item indicator */
 .nav-underline {
   width: 20px;
   height: auto;
@@ -77,57 +89,116 @@
   display: inline-block;
 }
 
+/* Responsive styles for screens <= 768px */
 @media(max-width:768px){
+  /* Navbar adjustments for mobile */
   .navbar{
     margin: 0;
     padding: 0;
     border: none;
-    justify-content: flex-end
+    justify-content: flex-end;
   }
+
+  /* Hide Connect button on mobile */
   .nav-connect{
     display: none;
   }
+
+  /* Show mobile menu open icon */
   .nav-mob-open{
     display: block;
     position: absolute;
     top: 20px;
     right: 20px;
+    z-index: 20;
   }
 
+  /* Show mobile menu close icon */
   .nav-mob-close{
     display: block;
     position: absolute;
     top: 20px;
     right: 20px;
     width: 30px;
-    z-index: 10;
+    z-index: 30;
   }
 
+  /* Modern sidebar nav-menu */
   .nav-menu{
     position: fixed;
-    flex-direction: column;
-    align-items: start;
     top: 0;
+    right: -100vw; /* hidden by default, slide in with JS */
     left: auto;
-    right: -350px;
-    padding-bottom: 40px;
-    gap: 20px;
-    background-color: #1f0016;
-    width: 350px;
-    height: 100vh;
-    z-index: 9;
-    transition: right 0.5s;
-    border: 1px solid #fff;
+    width: 50vw;
+    max-width: 350px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* center links vertically */
+    gap: 2.5rem;
+    background: rgba(31, 0, 22, 0.85); /* semi-transparent */
+    backdrop-filter: blur(12px); /* glassmorphism */
+    box-shadow: 0 8px 32px 0 rgba(31, 0, 22, 0.37);
+    border-radius: 24px 0 0 24px;
+    z-index: 15;
+    transition: right 0.5s cubic-bezier(.77,0,.18,1);
+    padding: 2.5rem 1.5rem 2.5rem 1.5rem;
+    border: 1.5px solid #3DAAF4;
   }
 
+  /* Remove vertical divider on mobile */
   .nav-menu:before {
     display: none;
   }
 
+  /* Mobile menu list items styling */
   .nav-menu li{
-    font-size: 30px;
-    padding-left: 100px;
-    flex-direction: row;
-    gap: 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    padding: 0.1rem 0;
+    width: 100%;
+    text-align: center;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    background: none;
+    box-shadow: none;
+    gap: 0.5rem;
+    min-height: unset;
+  }
+
+  /* Hide nav-menu item images on mobile */
+  .nav-menu li img {
+    display: none;
+  }
+
+  .nav-menu li:hover,
+  .nav-menu li:focus {
+    background: linear-gradient(90deg, #3DAAF4 0%, #E68A25 100%);
+    color: #fff;
+    transform: scale(1.04);
+    box-shadow: 0 2px 8px 0 rgba(61,170,244,0.10);
+  }
+
+  .anchor-link {
+    color: inherit;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    padding: 0.3rem 0;
+    border-radius: 7px;
+    transition: background 0.2s, color 0.2s;
+    font-size: 1rem;
+  }
+
+  .anchor-link:active {
+    background: rgba(61,170,244,0.10);
+    color: #3DAAF4;
+  }
+
+  /* Hide mobile menu open icon when nav-menu is open */
+  .nav-menu-open .nav-mob-open {
+    display: none !important;
   }
 }

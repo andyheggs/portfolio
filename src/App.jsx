@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
 import "./App.css";
 import Navbar from "./Components/Navbar/Navbar";
 import Hero from "./Components/Hero/Hero";
@@ -14,17 +13,18 @@ import Contact from "./Components/Contact/Contact";
 import Skills from "./Components/Skills/Skills";
 
 
+// Home page component with two‑column layout
 const Home = () => (
   /* Wrapper for the two‑column layout */
   <div className="layout-container">
-    {/* Left Sidebar: Hero + Navbar + socials */}
+    {/* Left Sidebar: Hero, Navbar, and Social Icons */}
     <div className="sidebar">
-      <Hero />
-      <Navbar />
-      <SocialIcons />
+      <Hero /> {/* Hero section */}
+      <Navbar /> {/* Navigation bar */}
+      <SocialIcons /> {/* Social media icons */}
     </div>
 
-    {/* Right Main Content */}
+    {/* Right Main Content Area */}
     <div className="main-content">
       <About />
       <MyWork />
@@ -35,12 +35,15 @@ const Home = () => (
   </div>
 );
 
-/* ------- App with routing ------- */
+/* ------- App Component with React Router ------- */
 const App = () => (
   <Router>
     <Routes>
+      {/* Home route */}
       <Route path="/" element={<Home />} />
+      {/* Insights repo route */}
       <Route path="/insights" element={<InsightsRepo />} />
+      {/* Projects repo route */}
       <Route path="/projects" element={<ProjectsRepo />} />
     </Routes>
   </Router>
