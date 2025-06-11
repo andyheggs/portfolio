@@ -13,7 +13,7 @@ import ProjectsRepo from "./pages/ProjectsRepo";
 import Contact from "./Components/Contact/Contact";
 import Skills from "./Components/Skills/Skills";
 
-/* ------- Home (existing layout) ------- */
+
 const Home = () => (
   /* Wrapper for the two‑column layout */
   <div className="layout-container">
