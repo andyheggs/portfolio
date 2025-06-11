@@ -1,3 +1,6 @@
+/***********************
+  Container for About section
+***********************/
 .about {
   display: flex;
   flex-direction: column;
@@ -9,6 +12,9 @@
   box-sizing: border-box;
 }
 
+/***********************
+  Layout for sections inside About
+***********************/
 .about-sections {
   display: flex;
   flex-wrap: wrap;
@@ -17,6 +23,9 @@
   width: 100%;
 }
 
+/***********************
+  Right section (details) in About
+***********************/
 .about-right {
   display: flex;
   flex-direction: column;
@@ -24,6 +33,9 @@
   width: 100%;
 }
 
+/***********************
+  Paragraph in About section
+***********************/
 .about-para {
   display: flex;
   flex-direction: column;
@@ -35,10 +47,16 @@
   overflow-wrap: break-word;
 }
 
+/***********************
+  Highlighted text in About
+***********************/
 .highlight {
   color: #fff;
 }
 
+/***********************
+  Container for action buttons in About
+***********************/
 .about-action{
   display: flex;
   align-items: center;
@@ -50,6 +68,9 @@
   margin-bottom: 0;
 }
 
+/***********************
+  "Connect" button style
+***********************/
 .about-connect{
   padding: 0.5rem 1rem;
   border-radius: 1rem;
@@ -58,6 +79,9 @@
   cursor: pointer;
 }
 
+/***********************
+  "Resume" button style
+***********************/
 .about-resume{
   padding: 0.5rem 1rem;
   border-radius: 1rem;
@@ -68,6 +92,9 @@
   cursor: pointer;
 }
 
+/***********************
+  Hover effect for "Connect" button
+***********************/
 .about-connect:hover{
   transform: scale(1.10);
   border: 5px solid #E68A25;
@@ -75,6 +102,9 @@
   transition: 0.3s;
 }
 
+/***********************
+  Hover effect for "Resume" button
+***********************/
 .about-resume:hover{
   transform: scale(1.10);
   border: 5px solid #3DAAF4;
@@ -82,6 +112,9 @@
   transition: 0.3s;
 }
 
+/***********************
+  Section wrapper for consistent layout
+***********************/
 .section {
   margin-left: auto;
   margin-right: auto;
@@ -92,6 +125,9 @@
   padding-right: 1rem;
 }
 
+/***********************
+  Responsive styles for smaller screens
+***********************/
 @media (max-width: 768px) {
   .about {
     gap: 50px;
