@@ -1,42 +1,54 @@
-
+/***************************************
+ * Social Icons Container Styles
+ ***************************************/
 .social-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  padding: 1rem;
-  gap: 2rem;
-  transition: transform 0.3s ease, color 0.3s ease;
-  font-size: clamp(1rem, 4vw, 2rem);
-  margin-top: auto;
+  display: flex;                              /* Arrange icons in a flex row */
+  justify-content: center;                    /* Center icons horizontally */
+  align-items: center;                        /* Center icons vertically */
+  cursor: pointer;                            /* Cursor appears as pointer on hover */
+  padding: 1rem;                              /* Padding around icon group */
+  gap: 2rem;                                  /* Space between each icon */
+  transition: transform 0.3s ease, color 0.3s ease;  /* Smooth transition for color/scale */
+  font-size: clamp(1rem, 4vw, 2rem);          /* Responsive font size for icons */
+  margin-top: auto;                           /* Push group to the bottom if flex parent */
 }
 
+/* Make SVG icons inherit the font size from their container */
 .social-icons svg {
   font-size: inherit;
 }
 
+/***************************************
+ * Responsive Adjustments (Tablet & Below)
+ ***************************************/
 @media (max-width: 768px) {
   .social-icons {
-    padding: 1rem;
-    margin: 0;
-    gap: 2rem;
-    font-size: clamp(1rem, 4vw, 2rem);
+    padding: 1rem;                           /* Keep padding consistent */
+    margin: 0;                               /* Remove top margin */
+    gap: 2rem;                               /* Maintain gap between icons */
+    font-size: clamp(1.5rem, 4vw, 2.5rem);   /* Slightly larger icons on mobile */
   }
 }
 
-.linkedIn-icon{
-  color: #0077B5;
+/***************************************
+ * Specific Icon Colors
+ ***************************************/
+.linkedIn-icon {
+  color: #0077B5;                           /* LinkedIn brand color */
 }
 
-.github-icon{
-  color: #E68A25;
+.github-icon {
+  color: #E68A25;                           /* Custom GitHub color */
 }
 
+/***************************************
+ * Icon Hover Effects
+ ***************************************/
 .linkedIn-icon:hover {
-  transform: scale(1.1);
-  color: #E68A25;
+  transform: scale(1.1);                      /* Slightly enlarge on hover */
+  color: #E68A25;                           /* Change to GitHub color on hover */
 }
 
 .github-icon:hover {
-  color: #3DAAF4;
+  color: #3DAAF4;                           /* GitHub icon changes to blue on hover */
 }
