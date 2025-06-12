@@ -116,11 +116,13 @@
   /* Show mobile menu close icon */
   .nav-mob-close{
     display: block;
+    margin-bottom: 0.5rem;
     position: absolute;
     top: 20px;
     right: 20px;
     width: 30px;
     z-index: 30;
+
   }
 
   /* Modern sidebar nav-menu */
@@ -164,7 +166,7 @@
     transition: background 0.2s, color 0.2s, transform 0.2s;
     background: none;
     box-shadow: none;
-    gap: 0.5rem;
+    gap: 0.2rem;
     min-height: unset;
   }
 

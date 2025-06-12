@@ -24,7 +24,7 @@ This is the source code my personal portfolio website, built with React and styl
 
 - **Framework:** [React](https://react.dev/)
 - **Build Tool:** [Vite](https://vitejs.dev/)
-- **Styling:** CSS(https://www.w3.org/Style/CSS//), [Emotion](https://emotion.sh/docs/styled)
+- **Styling:** [CSS](https://www.w3.org/Style/CSS//), [Emotion](https://emotion.sh/docs/styled)
 - **UI Components:** [Material UI Icons](https://mui.com/material-ui/material-icons/)
 - **Data Visualization:** [Nivo](https://nivo.rocks/), [D3 Hierarchy](https://github.com/d3/d3-hierarchy)
 - **Animation:** [Framer Motion](https://www.framer.com/motion/)
