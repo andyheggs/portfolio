@@ -22,7 +22,7 @@ const InsightsRepo = () => {
 
           <p>{post.s_desc}</p>
           <a
-            href={post.url ?? "#!"}
+            href={post.url ?? "https://arxiv.org/abs/2501.19267"}
             target="_blank"
             rel="noopener noreferrer"
             className="repo-read"
