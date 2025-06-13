@@ -1,7 +1,7 @@
 
 import React from 'react'
 import './Hero.css'
-import LogoSolo from '../../assets/LogoSolo.svg'
+import logo_small from '../../assets/logo_small.svg'
 
 // Define the Hero functional component
 const Hero = () => {
@@ -10,7 +10,7 @@ const Hero = () => {
     <div id='hero' className='hero'>
       {/* Logo section */}
       <div className='hero-logo'>
-        <img src={LogoSolo} alt=""/>
+        <img src={logo_small} alt=""/>
       </div>
       {/* My Name */}
       <div className='hero-myname'>
