@@ -1,24 +1,34 @@
+/***** Insights Section Styling *****/
+
 .insights {
+  /* Flexbox layout for vertical stacking & centering */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 40px;
-  margin: 40px 40px;
+  /* Responsive gap between children */
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+  /* Responsive margin around the section */
+  margin: clamp(1rem, 5vw, 2.5rem);
   max-width: 100%;
   box-sizing: border-box;
 }
 
+/* Title section for Insights */
 .insights-title {
   position: relative;
 }
 
+/* Main title heading */
 .insights-title h1 {
-  padding: 0px 30px;
-  font-size: 40px;
-  font-weight: 600;
+  /* Responsive horizontal padding */
+  padding: 0 clamp(1rem, 4vw, 2rem);
+  /* Responsive font size */
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-weight: 200;
 }
 
+/* Decorative image within title (e.g. underline, background) */
 .insights-title img{
   position: absolute;
   bottom: 0;
@@ -26,32 +36,38 @@
   z-index: -1;
 }
 
+/* Individual insight card formatting */
 .insights-format{
   display:flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
-  padding: 30px;
-  border-radius: 10px;
+  /* Responsive gap between card elements */
+  gap: clamp(0.75rem, 2vw, 1.25rem);
+  /* Responsive card padding */
+  padding: clamp(1rem, 4vw, 2rem);
+  border-radius: 0.625rem;
   border: 2px solid #fff;
   transition: 0.4s;
   cursor: pointer;
 }
 
+/* Container for all insight cards using CSS grid */
 .insights-container{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 40px;
-  margin-bottom: 80px;
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+  margin-bottom: clamp(2.5rem, 8vw, 5rem);
 }
 
+/* Card subtitle */
 .insights-format h3{
-  font-size: 20px;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
   font-weight: 600;
 }
 
+/* Card main/title text with gradient effect */
 .insights-format h2{
-  font-size: 20px;
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
   font-weight: 800;
   background: linear-gradient(270deg, #DF8908 50%, #3DAAF4 100%);
   background-clip: text;
@@ -59,26 +75,30 @@
   -webkit-text-fill-color: transparent;
 }
 
+/* Card description */
 .insights-format p{
   color: #d4d4d4;
-  font-size: 16px;
-  line-height: 32px;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  line-height: clamp(1.5rem, 2.5vw, 2rem);
   max-width: 100%;
 }
 
+/* "Read More" button/label styling within card */
 .insights-readmore{
   display: flex;
-  gap: 20px;
+  gap: clamp(0.75rem, 2vw, 1.25rem);
   align-items: center;
-  margin-top: 20px;
+  margin-top: clamp(1rem, 2vw, 1.25rem);
 }
 
+/* Card hover effect: highlight with border and scale up */
 .insights-format:hover{
   border: 2px solid #3DAAF4;
   transform: scale(1.05);
   transition: 0.4s;
 }
 
+/* General section constraints for layout */
 .section {
   margin-left: auto;
   margin-right: auto;
@@ -89,44 +109,41 @@
   padding-right: 1rem;
 }
 
+/***** Responsive styling for smaller screens *****/
 @media(max-width: 768px){
   .insights {
-    align-items: start;
-    gap: 70px;
-    margin: 20px 70px;
+    align-items: center;
+    gap: clamp(2rem, 8vw, 4.5rem);
+    margin: 0.5rem;
     max-width: 100%;
   }
 
   .insights-title h1 {
-    font-size: 50px;
+    font-size: clamp(2rem, 8vw, 3.125rem);
     padding: 0px;
   }
 
-  .insights-title img{
-    width: 130px;
-    margin-right:-20px ;
-  }
-
   .insights-format{
-    gap: 20px;
-    padding:32px;
+    gap: clamp(0.75rem, 4vw, 1.25rem);
+    padding: clamp(1rem, 6vw, 2rem);
   }
 
   .insights-format h2{
-    font-size: 28px;
+    font-size: clamp(1.5rem, 6vw, 1.75rem);
   }
 
   .insights-format p{
-    font-size: 14px;
-    line-height: 28px;
+    font-size: clamp(0.85rem, 3vw, 0.95rem);
+    line-height: clamp(1.25rem, 4vw, 1.75rem);
   }
 
   .insights-readmore img{
-    width: 20px;
+    width: clamp(1rem, 4vw, 1.25rem);
   }
 
   .insights-container{
+    /* Single column layout for mobile */
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: clamp(1rem, 4vw, 1.875rem);
   }
 }

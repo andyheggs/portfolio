@@ -22,6 +22,7 @@
   padding-left: 80px;
   font-size: 20px;
   position: relative;
+  z-index: 100;
   }
 
 /* Vertical divider before nav-menu */
@@ -202,5 +203,37 @@
   /* Hide mobile menu open icon when nav-menu is open */
   .nav-menu-open .nav-mob-open {
     display: none !important;
+  }
+
+  /* Ensure component titles and main content do not create new stacking contexts or high z-index */
+  .mywork,
+  .mywork-title,
+  .insights,
+  .insights-title,
+  .skills-container,
+  .skills-title,
+  .about,
+  .about-title,
+  .contact,
+  .contact-title {
+    position: static !important;
+    z-index: auto !important;
+  }
+
+  /* Ensure .mywork-list does not create a stacking context or z-index above navbar */
+  .mywork-list {
+    position: static !important;
+    z-index: auto !important;
+  }
+
+  /* Ensure all MyWork children do not create a stacking context or z-index above navbar */
+  .mywork-project,
+  .mywork-project-img,
+  .mywork-project-desc,
+  .mywork-tech-list,
+  .mywork-tech-item,
+  .mywork-tech-badge {
+    position: static !important;
+    z-index: auto !important;
   }
 }

@@ -46,7 +46,7 @@ export default function Skills() {
 
   return (
     <div id="skills" className={containerClasses.trim()}>
-      <h1 className="skills-title">- Technical Skills -</h1>
+      <h1 className="skills-title">Technical Skills</h1>
 
       {/* Category Selector */}
       <div className="skills-category-selector">

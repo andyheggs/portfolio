@@ -22,6 +22,8 @@
 ********************/
 .mywork-title h1{
   padding : 0rem;
+  text-align: center;
+  font-weight: 200;
   font-size: 2.5rem;
 }
 
@@ -103,22 +105,15 @@
 @media(max-width:768px){
   /* Adjust main wrapper gaps and margins */
   .mywork{
-    gap: 50px;
-    margin: 50px 70px;
-    align-items: start;
+    gap: 1rem;
+    margin: 1rem;
+    align-items: center;
   }
 
   /* Retain title heading styling */
   .mywork-title h1{
-    padding: 0;
-    font-size: 50px;
-    font-weight: 600;
-  }
-
-  /* Resize decorative image under title */
-  .mywork-title img{
-    width: 130px;
-    margin-right: -20px;
+    font-size: 3rem;
+    font-weight: 200;
   }
 
   /* Keep two columns in grid, reduce gap */

@@ -7,7 +7,7 @@ const Insights = () => {
   return (
     <div id="insights" className="insights">
       <div className="insights-title">
-        <h1>- Insights -</h1>
+        <h1>Insights</h1>
       </div>
 
       <div className="section">

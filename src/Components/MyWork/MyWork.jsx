@@ -11,7 +11,7 @@ const MyWork = () => {
   return (
     <div id='work' className='mywork'>
       <div className="mywork-title">
-        <h1>- Latest Work -</h1>
+        <h1>Latest Work</h1>
       </div>
       <div className="section">
         <div className="mywork-list">
