@@ -1,82 +1,106 @@
+/* --------------  CSS Custom Properties (Colors & Theme) -------------- */
 :root {
-  --accent: #3DAAF4;
-  --fg-primary: #dbe1ff;
-  --fg-secondary: #8892b0;
-  --bg-dark: #0a192f;
-  --border-light: #1e2d3d;
+  --accent: #3DAAF4;              /* Primary accent color */
+  --fg-primary: #dbe1ff;           /* Primary foreground (main text) */
+  --fg-secondary: #8892b0;         /* Secondary foreground (subtle text) */
+  --bg-dark: #0a192f;              /* Main background color */
+  --border-light: #1e2d3d;         /* Light border color */
 }
-
-/* --------------  Page wrapper -------------- */
+/* --------------  Page Wrapper -------------- */
 .projects-repo {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 80px 20px;
-  color: var(--fg-primary);
-  box-sizing: border-box;
+  max-width: 900px;                /* Container max width */
+  margin: 0 auto;                  /* Center horizontally */
+  padding: 80px 20px;              /* Vertical & horizontal padding */
+  color: var(--fg-primary);        /* Primary text color */
+  box-sizing: border-box;          /* Include padding & border in width/height */
 }
 
-/* everything below is unchanged from InsightsRepo.css */
-
+/* --------------  Repo Title Heading -------------- */
 .repo-title {
-  font-size: clamp(28px, 4vw, 40px);
-  font-weight: 600;
-  margin: 0 0 48px;
-  letter-spacing: -0.5px;
-  text-align: left;
+  font-size: clamp(28px, 4vw, 40px);  /* Responsive font size */
+  font-weight: 600;                   /* Bold */
+  margin: 0 0 48px;                   /* Bottom margin */
+  letter-spacing: -0.5px;             /* Slightly condensed */
+  text-align: left;                   /* Left-aligned */
 }
 
+/* --------------  Individual Repository Item -------------- */
 .repo-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 32px;
-  padding: 24px 0;
-  border-bottom: 1px solid var(--border-light);
-  transition: background 0.25s ease;
+  display: flex;                      /* Horizontal layout */
+  align-items: flex-start;            /* Items align to top */
+  gap: 32px;                         /* Gap between elements */
+  padding: 24px 0;                   /* Vertical padding */
+  border-bottom: 1px solid var(--border-light); /* Separator line */
+  transition: background 0.25s ease; /* Smooth hover background */
 }
 
-.repo-item:hover { background: rgba(100,255,218,0.04); }
+/* Repo item hover background effect */
+.repo-item:hover {
+  background: rgba(100,255,218,0.04);
+}
 
+/* --------------  Repo Item - Date/Time -------------- */
 .repo-item time {
-  flex: 0 0 110px;
-  font-size: 0.875rem;
-  color: var(--fg-secondary);
-  white-space: nowrap;
+  flex: 0 0 110px;              /* Fixed width */
+  font-size: 0.875rem;          /* Small font */
+  color: var(--fg-secondary);   /* Subtle color */
+  white-space: nowrap;          /* Prevents wrap */
 }
 
+/* --------------  Repo Item - Title -------------- */
 .repo-item h2 {
-  font-size: 1.1rem;
-  font-weight: 500;
-  margin: 0;
-  line-height: 1.3;
-  transition: color 0.25s ease;
+  font-size: 1.1rem;                /* Medium size */
+  font-weight: 500;                 /* Semi-bold */
+  margin: 0;                        /* Remove default margin */
+  line-height: 1.3;                 /* Tighter space */
+  transition: color 0.25s ease;     /* Smooth color on hover */
 }
 
-.repo-item:hover h2 { color: var(--accent); }
-
-.repo-item p {
-  margin: 4px 0 0;
-  font-size: 0.95rem;
-  color: var(--fg-secondary);
-  line-height: 1.5;
-}
-
-.repo-read {
-  margin-left: auto;
-  font-size: 0.875rem;
-  font-weight: 500;
+/* Highlight title on hover */
+.repo-item:hover h2 {
   color: var(--accent);
-  text-decoration: none;
-  white-space: nowrap;
-  align-self: center;
-  transition: transform 0.2s ease;
 }
 
-.repo-read::after { content: " ↗"; font-size: 0.8em; }
+/* --------------  Repo Item - Description -------------- */
+.repo-item p {
+  margin: 4px 0 0;               /* Small spacing on top */
+  font-size: 0.95rem;            /* Slightly smaller font */
+  color: var(--fg-secondary);    /* Subtle color */
+  line-height: 1.5;              /* Readable paragraph */
+}
 
+/* --------------  Read More Link -------------- */
+.repo-read {
+  margin-left: auto;                 /* Push to far right */
+  font-size: 0.875rem;               /* Small text */
+  font-weight: 500;                  /* Medium weight */
+  color: var(--accent);              /* Accent color */
+  text-decoration: none;             /* No underline */
+  white-space: nowrap;               /* Prevents wrap */
+  align-self: center;                /* Vertical alignment */
+  transition: transform 0.2s ease;   /* Move up on hover */
+}
+
+/* Add external link arrow on read more link */
+.repo-read::after {
+  content: " ↗";
+  font-size: 0.8em;
+}
+
+/* Lift read more link on hover/focus */
 .repo-read:hover,
-.repo-read:focus { transform: translateY(-2px); }
+.repo-read:focus {
+  transform: translateY(-2px);
+}
 
+/* --------------  Mobile Responsive Styles -------------- */
 @media (max-width: 600px) {
-  .repo-item { flex-direction: column; gap: 12px; }
-  .repo-read { margin-left: 0; align-self: flex-start; }
+  .repo-item {
+    flex-direction: column;         /* Stack items vertically */
+    gap: 12px;                      /* Smaller gap */
+  }
+  .repo-read {
+    margin-left: 0;                 /* Reset margin */
+    align-self: flex-start;         /* Align to left */
+  }
 }

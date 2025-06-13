@@ -1,3 +1,6 @@
+/***** Contact Form CSS Styling *****/
+
+/* Container for the entire contact section */
 .contact{
     display: flex;
     flex-direction: column;
@@ -7,26 +10,31 @@
     margin: 0.5rem 0.5rem;
 }
 
+/* Title section container */
 .contact-title{
   position: relative;
 }
 
+/* Main title styling */
 .contact-title h1{
   padding : 0rem;
   font-size: 2.5rem;
 }
 
+/* Layout for the contact section: left & right parts */
 .contact-section{
   display: flex;
   gap: 80px;
 }
 
+/* Left column container */
 .contact-left{
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
+/* Left column title styling (gradient text effect) */
 .contact-left h1{
   font-size:2rem;
   font-weight: 700;
@@ -36,6 +44,7 @@
   -webkit-text-fill-color: transparent;
 }
 
+/* Left column description paragraph */
 .contact-left p{
   max-width: 100%;
   color: #d8d8d8;
@@ -43,6 +52,7 @@
   line-height: 35px;
 }
 
+/* Contact details container */
 .contact-details{
   display: flex;
   flex-direction: column;
@@ -51,12 +61,14 @@
   font-size: 22px;
 }
 
+/* Individual contact detail row (icon + text) */
 .contact-detail{
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
+/* Right column (form) container */
 .contact-right{
   display: flex;
   flex-direction: column;
@@ -64,12 +76,14 @@
   gap: 30px;
 }
 
+/* Labels for form fields */
 .contact-right label{
   color:#d8d8d8;
   font-size: 22px;
   font-weight: 500;
 }
 
+/* Input fields styling */
 .contact-right input{
   border: none;
   max-width: 100%;
@@ -82,6 +96,7 @@
   font-size: 20px;
 }
 
+/* Textarea styling */
 .contact-right textarea{
   max-width: 100%;
   border: none;
@@ -93,6 +108,7 @@
   font-size: 20px;
 }
 
+/* Submit button styling */
 .contact-submit{
   border: none;
   color: #fff;
@@ -105,11 +121,13 @@
   transition: 0.3s;
 }
 
+/* Submit button hover effect */
 .contact-submit:hover{
   transform: scale(1.1);
   transition: 0.3;
 }
 
+/* Notification messages (success / error) */
 /* Add to Contact.css */
 .notification {
   margin-bottom: 1rem;
@@ -130,6 +148,7 @@
   border: 1px solid #f5c6cb;
 }
 
+/* Shared section container style */
 .section {
   margin-left: auto;
   margin-right: auto;
@@ -140,13 +159,16 @@
   padding-right: 1rem;
 }
 
+/***** Responsive Styling *****/
 @media(max-width: 768px){
+  /* Mobile contact container adjustments */
   .contact{
     gap: 2rem;
     margin: 2rem 2rem;
     align-items: start;
   }
 
+  /* Mobile title styling */
   .contact-title h1{
     padding: 0;
     font-size: 3rem;
@@ -154,15 +176,18 @@
     text-align: center;
   }
 
+  /* Mobile image sizing */
   .contact-title img{
     width: 130px;
     margin-right: -20px;
   }
 
+  /* Stack left and right columns on mobile */
   .contact-section{
     flex-direction: column;
   }
 
+  /* Left column mobile sizing */
   .contact-left h1{
     font-size: 2.5rem;
   }
@@ -171,6 +196,7 @@
     font-size: 18px;
   }
 
+  /* Contact detail layout for mobile */
   .contact-detail{
     gap: 20px;
   }
@@ -179,20 +205,24 @@
     width: 25px;
   }
 
+  /* Mobile label size */
   .contact-right label{
     font-size: 20px;
   }
 
+  /* Mobile input field style */
   .contact-right input{
     width: 100%;
     font-size: 20px;
   }
 
+  /* Mobile textarea field style */
   .contact-right textarea{
     width: 95%;
     font-size: 20px;
   }
 
+  /* Submit button adjustments for mobile */
   .contact-submit{
     padding: 15px 40px;
     font-size: 20px;
