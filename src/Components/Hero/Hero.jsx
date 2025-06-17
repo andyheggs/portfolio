@@ -1,4 +1,3 @@
-
 import React from 'react'
 import './Hero.css'
 import logo_small from '../../assets/logo_small.svg'
@@ -10,7 +9,7 @@ const Hero = () => {
     <div id='hero' className='hero'>
       {/* Logo section */}
       <div className='hero-logo'>
-        <img src={logo_small} alt=""/>
+        <img src={logo_small} alt="Andy Heggs logo"/>
       </div>
       {/* My Name */}
       <div className='hero-myname'>

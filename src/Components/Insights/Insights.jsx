@@ -32,7 +32,7 @@ const Insights = () => {
                 className="insights-readmore"
               >
                 <span style={{ color: "grey" }}>Read More</span>
-                <img src={arrow_icon} alt="" />
+                <img src={arrow_icon} alt="Arrow icon for read more" />
               </a>
             </div>
           ))}

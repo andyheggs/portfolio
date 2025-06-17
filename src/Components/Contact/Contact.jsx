@@ -56,13 +56,13 @@ const Contact = () => {
           <p>I'm currently avalible for new opportunities, so feel free to reach out.</p>
           <div className="contact-details">
             <div className="contact-detail">
-            <img src={mail_icon} alt="" /><p>andy@heggs.net</p>
+            <img src={mail_icon} alt="Email icon" /><p>andy@heggs.net</p>
             </div>
             <div className="contact-detail">
-            <img src={call_icon} alt="" /><p>+44-7917-752-275</p>
+            <img src={call_icon} alt="Phone icon" /><p>+44-7917-752-275</p>
             </div>
             <div className="contact-detail">
-            <img src={location_icon} alt="" /><p>Isle of Man</p>
+            <img src={location_icon} alt="Location icon" /><p>Isle of Man</p>
             </div>
           </div>
         </div>

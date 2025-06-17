@@ -82,15 +82,15 @@ const Navbar = () => {
   return (
     <div className='navbar' ref={navbarRef}>
       {/* Mobile menu open button */}
-      <img src={menu_open} onClick={openMenu} alt='' className='nav-mob-open'/>
+      <img src={menu_open} onClick={openMenu} alt="Open menu icon" className='nav-mob-open'/>
       <ul ref={menuRef} className="nav-menu">
         {/* Mobile menu close button */}
-        <img src={menu_close} onClick={closeMenu} alt='' className="nav-mob-close"/>
+        <img src={menu_close} onClick={closeMenu} alt="Close menu icon" className="nav-mob-close"/>
         {/* Navigation links */}
         {sections.map(({ id, label }) => (
           <li key={id}>
             {/* Underline/indicator for active menu item */}
-            {menu === id ? <img src={underline} alt='' className="nav-underline" /> : null}
+            {menu === id ? <img src={underline} alt="Active section underline" className="nav-underline" /> : null}
             <AnchorLink className='anchor-link' offset={50} href={`#${id}`}>
               {/* Change active state on click */}
               <p onClick={() => setMenu(id)}>{label}</p>

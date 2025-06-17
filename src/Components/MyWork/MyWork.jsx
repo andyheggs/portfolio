@@ -57,7 +57,7 @@ const MyWork = () => {
             style={{ textDecoration: "none", color: "inherit" }}
           >
             <p>Show More</p>
-            <img src={arrow_icon} alt=""/>
+            <img src={arrow_icon} alt="Arrow icon for show more"/>
           </a>
       </div>
     </div>
