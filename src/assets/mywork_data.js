@@ -26,7 +26,7 @@ const mywork_data = [
         w_name:"Portfolio Management",
         w_img:project3_img,
         w_desc: "Assetec is a secure, full-stack stock portfolio web app built with React and Django REST, offering real-time valuations, role-based access, and dynamic portfolio analytics, with robust back-end testing and continuous integration, deployed on Heroku and Netlify.",
-        w_link: "https://assetec.netlify.app/",
+        w_link: "https://assetec.io/",
         w_tech: [ "React", "Django", "PostgreSQL", "JWT Auth", "REST API"]
     },
     {
