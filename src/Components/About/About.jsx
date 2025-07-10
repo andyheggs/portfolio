@@ -35,7 +35,7 @@ const About = () => {
               {/* External link to resume/CV, opens in new tab */}
               <a
                 className="about-resume"
-                href="/cv.pdf"
+                href="/Andrew_Heggs-Software_Engineer-CV-2025.pdf"
                 target="_blank"
                 title="Opens in a new tab"
                 rel="noopener noreferrer"              >
